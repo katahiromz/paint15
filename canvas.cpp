@@ -98,8 +98,6 @@ struct ModeSelect : IMode
         else
         {
             s_pt = pt;
-            SetRect(&s_rcFloating, s_ptOld.x, s_ptOld.y, s_pt.x, s_pt.y);
-            DoNormalizeRect(&s_rcFloating);
         }
         InvalidateRect(hwnd, NULL, TRUE);
     }
@@ -114,6 +112,8 @@ struct ModeSelect : IMode
         else
         {
             s_pt = pt;
+            SetRect(&s_rcFloating, s_ptOld.x, s_ptOld.y, s_pt.x, s_pt.y);
+            DoNormalizeRect(&s_rcFloating);
         }
         InvalidateRect(hwnd, NULL, TRUE);
     }
